@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import { FaChevronCircleRight } from "react-icons/fa";
 import AOS from 'aos'
 import 'aos/dist/aos'
+
+
+
 const About = () =>{
 
     useEffect(() =>{

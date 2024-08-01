@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 import { styled } from "@mui/material";
 
 import logoimg from "../../assets/Logo.png"
+
+import {nav, Link} from "react-router-dom"
 
 
 const Logo = styled('img')({
@@ -23,10 +25,10 @@ const Header = () => {
   };
 
   const navItems = [
-    { link: "Home", path: "home" },
-    { link: "Services", path: "about" },
-    { link: "About Us", path: "services" },
-    { link: "Contact", path: "contact" }, // Corrected 'Contact' to lowercase
+    { link: "Home", path: "" },
+    { link: "Services", path: "services" },
+    { link: "About Us", path: "about" },
+    { link: "Contact", path: "contact" }, 
   ];
 
   return (
