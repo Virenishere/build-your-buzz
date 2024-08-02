@@ -31,13 +31,16 @@ const Home = ()=>{
                <Hero />
                </Component>
 
-               <section id='hero' className='w-[90%] m-auto flex lg:flex-row flex-col justify-between items-center gap-28 py-20 sm:px-20'>
+               <section id='hero' className='w-[90%] flex m-auto flex lg:flex-row flex-col justify-between items-center gap-28 py-20 sm:px-20'>
                 <div className='flex flex-col justify-center items-start gap-8'>
                     <h1 data-aos="zoom-in" data-aos-delay="" className='tex-black font-semibold lg:text-[90px] text-[65px] lg:leading-[100px] leading-[80px] font-ubuntu'>Transform Your Brand’s Presence: Expert Digital Marketing Solutions</h1>
                     <p data-aos="xoom-in" data-aos-delay="400" className='font-ubuntu text-[20px] text-slate-700'>We design exceptional brands, products, web apps, <br></br> websites for startups and enterprises.</p>
                     <button data-aos="zoom-in" data-aos-delay="600" className='bg-limegreen px-6 py-4 rounded-full text-[17px] font-semibold font-ubuntu hover:bg-black hover:text-white'>Get Started Now</button>
                     <div data-aos="zoom-in" data-aos-delay="600" className='flex lg:flex-row flex-col justify-center lg:items-center items-start gap-10'>
+                   
                     <img src={clients} alt="clientimg" />
+
+
                     <p className='font-ubuntu text-[20px] font-bold text-black'>Trusted by many Customers</p>
                 </div>
                 </div>
@@ -46,6 +49,7 @@ const Home = ()=>{
 
                <div className="w-100% h-32 bg-limegreen flex flex-row justify-between items-start gap-8 py-10 px-10">
                 
+<<<<<<< HEAD
                 <div className='w-25% flex'>
                 <GoDotFill />
                 <p className='text-[20px]'>Creative People</p>
@@ -73,6 +77,11 @@ const Home = ()=>{
                <section id='hero' className='w-[90%] m-auto flex lg:flex-row flex-col justify-between items-center gap-28 py-20 sm:px-20'>
                <div className='flex flex-col items-center gap-8'>
     <h1 data-aos="zoom-in" data-aos-delay="" className='text-black font-semibold lg:text-[90px] text-[65px] lg:leading-[100px] leading-[80px] font-ubuntu'>
+=======
+                <div>   
+                <div className='flex flex-col items-center gap-8'>
+    <h1 data-aos="zoom-in" data-aos-delay="" className='display-inline text-black font-semibold lg:text-[90px] text-[65px] lg:leading-[100px] leading-[80px] font-ubuntu'>
+>>>>>>> d774460ee843178fa49a79282e9dcebac6e309e7
         Build Your Buzz Marketing Service
     </h1>
     <p data-aos="zoom-in" data-aos-delay="400" className='font-ubuntu text-[20px] text-slate-700'>
