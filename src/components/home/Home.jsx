@@ -39,9 +39,17 @@ const Home = ()=>{
                     <p className='font-ubuntu text-[20px] font-bold text-black'>Trusted by many Customers</p>
                 </div>
                 </div>
-               
-                <div>    
-                </div>
+                
+                <div>   
+                <div className='flex flex-col items-center gap-8'>
+    <h1 data-aos="zoom-in" data-aos-delay="" className='text-black font-semibold lg:text-[90px] text-[65px] lg:leading-[100px] leading-[80px] font-ubuntu'>
+        Build Your Buzz Marketing Service
+    </h1>
+    <p data-aos="zoom-in" data-aos-delay="400" className='font-ubuntu text-[20px] text-slate-700'>
+        Digital marketing refers to the process of enhancing the visibility and appeal of products, services, or brands through the use of digital technologies. It involves utilizing a variety of online platforms such as search engines, social media, email, mobile applications, and digital ads to connect with potential customers. The goal is to drive traffic to websites, boost brand recognition, and generate leads or sales. Strategies in digital marketing include improving search engine rankings (SEO), engaging users through social media, creating valuable content, running targeted email campaigns, investing in online advertising, and analyzing campaign performance to refine and achieve marketing objectives in the digital landscape.
+    </p>
+</div>                
+</div>
 
                </section>
 

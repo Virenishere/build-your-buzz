@@ -38,13 +38,13 @@ const Hero = () =>{
         draggable={false}
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={4000}
+        autoPlaySpeed={2500}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
         containerClass="carousel-container"
         >
             <div>
-                <Image src={laptopimg} alt="laptopimg"/>
+                <Image src={laptopimg} alt="laptopimg"/>      
             </div>
             <div>
                  <Image src={phoneimg} alt="phoneimg"/>
