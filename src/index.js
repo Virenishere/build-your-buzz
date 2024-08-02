@@ -11,6 +11,7 @@ import Contact from './components/contact/Contact';
 import Services from './components/Services';
 
 
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
         path: "contact",
         element: <Contact />
       }
+   
     ]
   }
 ])
