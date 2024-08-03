@@ -44,7 +44,8 @@ const Hero = () =>{
         containerClass="carousel-container"
         >
             <div>
-                <Image src={laptopimg} alt="laptopimg"/>      
+                <Image src={laptopimg} alt="laptopimg"/>    
+
             </div>
             <div>
                  <Image src={phoneimg} alt="phoneimg"/>
