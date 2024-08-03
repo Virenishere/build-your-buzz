@@ -1,9 +1,13 @@
 import React from 'react';
-import services1 from '../assets/services1.png';
+import services1 from '../assets/service1.png';
 import services2 from '../assets/services2.png';
 import services3 from '../assets/services3.png';
+<<<<<<< HEAD
 import Servicestwo from './Servicestwo';
 
+=======
+import {Services2} from '../components/Service2'
+>>>>>>> origin/main
 
 const CardSection = () => {
   return (
@@ -19,7 +23,7 @@ const CardSection = () => {
             </a>
           </div>
           <div className="bg-gray-900 p-6 rounded-lg text-center">
-            <div className="text-4xl mb-4"><img src={services2} alt=""  className='w-64 py-4 mx-10'/></div>
+            <div className="text-4xl mb-4"><img src={services2} alt=""  className='w-70 py-3 mx-2'/></div>
             <h3 className="text-xl font-bold mb-2">Content Creation and Management</h3>
             <p className="mb-4">The wise man therefore always holds in these matters to this principle:similique sunt in culpa qui officia deserunt</p>
             <a href="#" className="text-green-500 hover:underline">
@@ -36,7 +40,11 @@ const CardSection = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       <Servicestwo />
+=======
+     <Services2 />
+>>>>>>> origin/main
     </div>
   );
 };

@@ -4,12 +4,17 @@ import Hero from "./Hero";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { GoDotFill } from "react-icons/go";
+<<<<<<< HEAD
 import business from "../../assets/business.jpeg"
+=======
+
+>>>>>>> origin/main
 
 import {Box, styled} from '@mui/material';
 
 import clients from "../../assets/clients.png"
-
+import business from "../../assets/business.jpg"
+ 
 const Component = styled(Box)`
 padding: 10px 5px;
 background: #F2F2F2;
@@ -31,7 +36,11 @@ const Home = ()=>{
                <Hero />
                </Component>
 
+<<<<<<< HEAD
                <section id='hero' className='w-[90%] m-auto flex lg:flex-row flex-col justify-between items-center gap-28 py-20 sm:px-20'>
+=======
+               <section id='hero' className='w-[90%] flex-auto m-auto lg:flex-row flex-col justify-between items-center gap-28 py-20 sm:px-20'>
+>>>>>>> origin/main
                 <div className='flex flex-col justify-center items-start gap-8'>
                     <h1 data-aos="zoom-in" data-aos-delay="" className='tex-black font-semibold lg:text-[90px] text-[65px] lg:leading-[100px] leading-[80px] font-ubuntu'>Transform Your Brand’s Presence: Expert Digital Marketing Solutions</h1>
                     <p data-aos="xoom-in" data-aos-delay="400" className='font-ubuntu text-[20px] text-slate-700'>We design exceptional brands, products, web apps, <br></br> websites for startups and enterprises.</p>
@@ -69,11 +78,19 @@ const Home = ()=>{
                </div>
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
                <section id='hero' className='w-[90%] m-auto flex lg:flex-row flex-col justify-between items-center gap-28 py-20 sm:px-20'>
                <div className='flex flex-col items-center gap-8'>
     <h1 data-aos="zoom-in" data-aos-delay="" className='text-black font-semibold lg:text-[90px] text-[65px] lg:leading-[100px] leading-[80px] font-ubuntu'>
         Build Your Buzz Marketing Service
     </h1>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
     <img src={business} alt='img'/>
 
     <p data-aos="zoom-in" data-aos-delay="400" className='font-ubuntu text-[20px] text-slate-700'>

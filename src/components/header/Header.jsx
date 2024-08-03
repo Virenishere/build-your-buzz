@@ -5,7 +5,7 @@ import { styled } from "@mui/material";
 
 import logoimg from "../../assets/Logo.png"
 
-import {nav, Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 
 const Logo = styled('img')({
@@ -37,8 +37,10 @@ const Header = () => {
         Build Your<span className="text-limegreen italic"> Buzz</span>
       </h1> */}
 
+      <Link to="">
       <Logo src={logoimg} alt="logo"/>
-
+      </Link>
+      
       {/* Desktop navigation */}
       <ul className="lg:flex justify-center items-center gap-8 hidden">
         {navItems.map(({ link, path }) => (
@@ -57,9 +59,9 @@ const Header = () => {
       </ul>
 
       {/* Hire Us button (hidden on mobile) */}
-      <button className="bg-limegreen font-ubuntu hover:bg-white text-black px-4 py-2 rounded-full font-bold transform hover:scale-105 transition-transform duration-300 cursor-pointer md:flex hidden">
+      <Link to="contact" className="bg-limegreen font-ubuntu hover:bg-white text-black px-4 py-2 rounded-full font-bold transform hover:scale-105 transition-transform duration-300 cursor-pointer md:flex hidden">
         HIRE US
-      </button>
+      </Link>
 
       {/* Mobile menu toggle */}
       <div className="flex justify-center items-center lg:hidden mt-3" onClick={toggleMenu}>
