@@ -35,7 +35,7 @@ const CardSection = () => {
           </div>
         </div>
       </div>
-     <Services2 />
+     {/* <Services2 /> */}
     </div>
   );
 };
