@@ -10,7 +10,10 @@ import {Box, styled} from '@mui/material';
 
 import clients from "../../assets/clients.png"
 import business from "../../assets/business.jpg"
+import Clients from '../Clients';
  
+
+
 const Component = styled(Box)`
 padding: 10px 5px;
 background: #F2F2F2;
@@ -127,8 +130,8 @@ const Home = ()=>{
     </p>
  </div>                
             </section>
-
-
+            <Clients/>
+           
         </>
     )
 }
