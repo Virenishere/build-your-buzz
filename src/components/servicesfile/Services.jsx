@@ -36,7 +36,7 @@ const CardSection = () => {
           </div>
         </div>
       </div>
-      <Servicestwo />
+     <Servicestwo />
     </div>
   );
 };
