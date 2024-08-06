@@ -130,7 +130,6 @@ const Home = ()=>{
  </div>                
             </section>
 
-
         </>
     )
 }
