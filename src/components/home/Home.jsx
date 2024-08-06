@@ -1,148 +1,90 @@
-import React, { useState } from 'react';
+import react, { useEffect } from 'react';
 
-const JobApplicationForm = () => {
-  const [file, setFile] = useState(null);
-  const [skills, setSkills] = useState('');
-  const [experience, setExperience] = useState('');
-  const [portfolio, setPortfolio] = useState('');
+import Hero from "./Hero";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { GoDotFill } from "react-icons/go";
+// import business from "../../assets/business.jpg"
 
-  const handleFileChange = (event) => {
-    setFile(event.target.files[0]);
-  };
+import {Box, styled} from '@mui/material';
 
-<<<<<<< HEAD
-  const handleSkillsChange = (event) => {
-    setSkills(event.target.value);
-  };
-=======
 import clients from "../../assets/clients.png"
 import business from "../../assets/business.jpg"
-import Clients from '../Clients';
- 
-
+import ApplicationForm from '../Careear/Careear';
 
 const Component = styled(Box)`
 padding: 10px 5px;
 background: #F2F2F2;
 `
->>>>>>> 2d865d88759b910968868169087c935c7e6663e9
 
-  const handleExperienceChange = (event) => {
-    setExperience(event.target.value);
-  };
+const Home = ()=>{
 
-  const handlePortfolioChange = (event) => {
-    setPortfolio(event.target.value);
-  };
+    useEffect(()=>{
+        AOS.init({
+            offset: 200,
+            duration: 400,
+            easing: 'ease-in-sine',
+        })
+    }, [])
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Handle form submission
-    console.log('Selected file:', file);
-    console.log('Skills:', skills);
-    console.log('Experience:', experience);
-    console.log('Portfolio URL:', portfolio);
-  };
+    return (
+        <>
+               <Component>
+            <ApplicationForm/>
+               <Hero />
+               </Component>
 
-  return (
-    <div className="max-w-md mx-auto p-4 bg-white rounded-lg shadow-md">
-      <h1 className="text-2xl font-bold mb-4">Job Application for Digital Marketing</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-            required
-          />
-        </div>
+               <section id='hero' className='w-[90%] m-auto flex lg:flex-row flex-col justify-between items-center gap-28 py-20 sm:px-20'>
+                <div className='flex flex-col justify-center items-start gap-8'>
+                    <h1 data-aos="zoom-in" data-aos-delay="" className='tex-black font-semibold lg:text-[90px] text-[65px] lg:leading-[100px] leading-[80px] font-ubuntu'>Transform Your Brand’s Presence: Expert Digital Marketing Solutions</h1>
+                    <p data-aos="xoom-in" data-aos-delay="400" className='font-ubuntu text-[20px] text-slate-700'>We design exceptional brands, products, web apps, <br></br> websites for startups and enterprises.</p>
+                    <button data-aos="zoom-in" data-aos-delay="600" className='bg-limegreen px-6 py-4 rounded-full text-[17px] font-semibold font-ubuntu hover:bg-black hover:text-white'>Get Started Now</button>
+                    <div data-aos="zoom-in" data-aos-delay="600" className='flex lg:flex-row flex-col justify-center lg:items-center items-start gap-10'>
+                    <img src={clients} alt="clientimg" />
+                    <p className='font-ubuntu text-[20px] font-bold text-black'>Trusted by many Customers</p>
+                </div>
+                </div>
+               </section>
 
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-            required
-          />
-        </div>
 
-        <div className="mb-4">
-          <label htmlFor="resume" className="block text-sm font-medium text-gray-700">Resume (PDF or DOCX)</label>
-          <input
-            type="file"
-            id="resume"
-            name="resume"
-            accept=".pdf,.doc,.docx"
-            onChange={handleFileChange}
-            className="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:border file:border-gray-300 file:rounded-md file:text-sm file:font-medium file:bg-gray-100 hover:file:bg-gray-200"
-            required
-          />
-        </div>
+               <div className="w-100% h-32 bg-limegreen flex flex-row justify-between items-start gap-8 py-10 px-10">
+                
+                <div className='w-25% flex'>
+                <GoDotFill className='text-[30px]'/>
+                <p className='text-[20px] font-bold'>Creative People</p>
+                </div>
 
-        <div className="mb-4">
-          <label htmlFor="skills" className="block text-sm font-medium text-gray-700">Skills</label>
-          <textarea
-            id="skills"
-            name="skills"
-            rows="4"
-            value={skills}
-            onChange={handleSkillsChange}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-            placeholder="List your digital marketing skills, separated by commas"
-            required
-          />
-        </div>
+                <div className='w-25% flex'>
+                <GoDotFill className='text-[30px]' />
+                <p className='text-[20px] font-bold'>Good Reviews</p>
+                </div>
+                
+                <div className='w-25% flex'>
+                <GoDotFill className='text-[30px]'/>
+                <p className='text-[20px] font-bold'>Awesome Design</p>
+                </div>
+                
+                <div className='w-25% flex'>
+                <GoDotFill className='text-[30px]' />
+                <p className='text-[20px] font-bold'>Fast Delivery</p>
+                </div>
+               
+               </div>
 
-        <div className="mb-4">
-          <label htmlFor="experience" className="block text-sm font-medium text-gray-700">Experience (in years)</label>
-          <select
-            id="experience"
-            name="experience"
-            value={experience}
-            onChange={handleExperienceChange}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-            required
-          >
-            <option value="">Select experience level</option>
-            <option value="0-1">0-1 year</option>
-            <option value="2-3">2-3 years</option>
-            <option value="4-5">4-5 years</option>
-            <option value="6-10">6-10 years</option>
-            <option value="10+">More than 10 years</option>
-          </select>
-        </div>
 
-        <div className="mb-4">
-          <label htmlFor="portfolio" className="block text-sm font-medium text-gray-700">Portfolio URL</label>
-          <input
-            type="url"
-            id="portfolio"
-            name="portfolio"
-            value={portfolio}
-            onChange={handlePortfolioChange}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-            placeholder="Enter the URL to your portfolio or personal website"
-          />
-        </div>
+               <section id='hero' className='w-[90%] m-auto flex lg:flex-row flex-col justify-between items-center gap-28 py-20 sm:px-20'>
+               <div className='flex flex-col items-center gap-8'>
+    <h1 data-aos="zoom-in" data-aos-delay="" className='text-black font-semibold lg:text-[90px] text-[65px] lg:leading-[100px] leading-[80px] font-ubuntu'>
+        Build Your Buzz Marketing Service
+    </h1>
+    <img src={business} alt='img'/>
 
-        <button
-          type="submit"
-          className="w-full px-4 py-2 bg-indigo-600 text-white font-bold rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        >
-          Submit
-        </button>
-      </form>
-    </div>
-  );
-};
+    <p data-aos="zoom-in" data-aos-delay="400" className='font-ubuntu text-[20px] text-slate-700'>
+        Digital marketing refers to the process of enhancing the visibility and appeal of products, services, or brands through the use of digital technologies. It involves utilizing a variety of online platforms such as search engines, social media, email, mobile applications, and digital ads to connect with potential customers. The goal is to drive traffic to websites, boost brand recognition, and generate leads or sales. Strategies in digital marketing include improving search engine rankings (SEO), engaging users through social media, creating valuable content, running targeted email campaigns, investing in online advertising, and analyzing campaign performance to refine and achieve marketing objectives in the digital landscape.
+    </p>
+             </div>                
+               </section>
 
-<<<<<<< HEAD
-export default JobApplicationForm;
-=======
 
                <section id='hero' className='w-[90%] m-auto flex lg:flex-row flex-col justify-between items-center gap-28 py-20 sm:px-20'>
                <div className='flex flex-col items-center gap-8'>
@@ -187,11 +129,10 @@ export default JobApplicationForm;
     </p>
  </div>                
             </section>
-            <Clients/>
-           
+
+
         </>
     )
 }
 
 export default Home;
->>>>>>> 2d865d88759b910968868169087c935c7e6663e9
