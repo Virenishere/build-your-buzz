@@ -1,4 +1,4 @@
-import react, { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import Hero from "./Hero";
 import AOS from 'aos'
@@ -10,7 +10,7 @@ import {Box, styled} from '@mui/material';
 
 import clients from "../../assets/clients.png"
 import business from "../../assets/business.jpg"
-import Clients from '../Clients';
+
  
 
 
@@ -130,7 +130,6 @@ const Home = ()=>{
     </p>
  </div>                
             </section>
-            <Clients/>
            
         </>
     )
