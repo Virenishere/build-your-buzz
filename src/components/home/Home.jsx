@@ -10,9 +10,22 @@ const JobApplicationForm = () => {
     setFile(event.target.files[0]);
   };
 
+<<<<<<< HEAD
   const handleSkillsChange = (event) => {
     setSkills(event.target.value);
   };
+=======
+import clients from "../../assets/clients.png"
+import business from "../../assets/business.jpg"
+import Clients from '../Clients';
+ 
+
+
+const Component = styled(Box)`
+padding: 10px 5px;
+background: #F2F2F2;
+`
+>>>>>>> 2d865d88759b910968868169087c935c7e6663e9
 
   const handleExperienceChange = (event) => {
     setExperience(event.target.value);
@@ -127,4 +140,58 @@ const JobApplicationForm = () => {
   );
 };
 
+<<<<<<< HEAD
 export default JobApplicationForm;
+=======
+
+               <section id='hero' className='w-[90%] m-auto flex lg:flex-row flex-col justify-between items-center gap-28 py-20 sm:px-20'>
+               <div className='flex flex-col items-center gap-8'>
+    <h1 data-aos="zoom-in" data-aos-delay="" className='text-black font-semibold lg:text-[90px] text-[65px] lg:leading-[100px] leading-[80px] font-ubuntu'>
+    High Search Rankings
+    </h1>
+
+    <img src={business} alt='img'/>
+
+    <p data-aos="zoom-in" data-aos-delay="400" className='font-ubuntu text-[20px] text-slate-700'>
+    Achieving high search rankings is crucial for boosting your online visibility and attracting more organic traffic to your site. At Build Your Buzz, we specialize in implementing cutting-edge SEO strategies that propel your website to the top of search engine results pages (SERPs). Our approach includes comprehensive keyword research, on-page optimization, and high-quality link building to ensure your site not only ranks higher but also reaches the right audience. By focusing on the latest SEO trends and best practices, we help you stay ahead of the competition and make your brand more discoverable in a crowded digital landscape. Elevate your online presence and watch your business grow with our expert SEO solutions.
+    </p>
+ </div>                
+            </section>
+
+
+            <section id='hero' className='w-[90%] m-auto flex lg:flex-row flex-col justify-between items-center gap-28 py-20 sm:px-20'>
+               <div className='flex flex-col items-center gap-8'>
+    <h1 data-aos="zoom-in" data-aos-delay="" className='text-black font-semibold lg:text-[90px] text-[65px] lg:leading-[100px] leading-[80px] font-ubuntu'>
+    Expertise
+    </h1>
+
+    <img src={business} alt='img'/>
+
+    <p data-aos="zoom-in" data-aos-delay="400" className='font-ubuntu text-[20px] text-slate-700'>
+    At Build Your Buzz, our expertise lies at the intersection of innovative digital strategies and proven marketing techniques. Our team of seasoned professionals brings a wealth of experience in various aspects of digital marketing, including search engine optimization (SEO), social media management, content creation, and data analytics. We pride ourselves on our deep understanding of market trends and consumer behavior, allowing us to craft tailored solutions that drive measurable results. Whether you’re looking to enhance your online presence, increase engagement, or achieve sustainable growth, our expertise ensures that your marketing efforts are both strategic and effective. Partner with us to leverage our knowledge and experience, and watch your brand thrive in the dynamic digital landscape.
+    </p>
+ </div>                
+            </section>
+
+
+            <section id='hero' className='w-[90%] m-auto flex lg:flex-row flex-col justify-between items-center gap-28 py-20 sm:px-20'>
+               <div className='flex flex-col items-center gap-8'>
+    <h1 data-aos="zoom-in" data-aos-delay="" className='text-black font-semibold lg:text-[90px] text-[65px] lg:leading-[100px] leading-[80px] font-ubuntu'>
+    Complete Brand Control
+    </h1>
+    
+    <img src={business} alt='img'/>
+
+    <p data-aos="zoom-in" data-aos-delay="400" className='font-ubuntu text-[20px] text-slate-700'>
+    Achieving complete brand control means having the ability to shape, manage, and enhance every aspect of your brand’s identity and presence across all digital platforms. At Build Your Buzz, we empower you with comprehensive tools and strategies to maintain a cohesive and impactful brand image. From crafting a distinctive brand voice and visual style to managing your online reputation and engagement, we ensure that every touchpoint reflects your brand’s core values and messaging. Our tailored approach provides you with the insights and control needed to adapt and evolve your brand strategy, ensuring consistency and alignment with your business goals. Take charge of your brand’s narrative and watch it resonate with your audience, all while reinforcing your market position with our expert support.
+    </p>
+ </div>                
+            </section>
+            <Clients/>
+           
+        </>
+    )
+}
+
+export default Home;
+>>>>>>> 2d865d88759b910968868169087c935c7e6663e9

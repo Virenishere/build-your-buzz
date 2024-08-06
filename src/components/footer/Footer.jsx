@@ -31,7 +31,7 @@ const Footer = () =>{
                 <p className="text-[16px] font-ubuntu text-slate-100">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima delectus amet illo dolore veritatis repellendus</p>
                 <div className="flex justify-center items-center gap-6 w-full">
                     <input type="email" placeholder="Enter your valid email"  className="w-full bg-slate-900 px-6 py-4 rounded-lg border-none font-ubuntu text-white"/>
-                    <button className="bg-limegreen px-6 py-4 rounded-xl text-[17px] font-semibold">Subscribe Now</button>
+                    <button className="bg-limegreen px-6 py-2 rounded-xl text-[17px] font-semibold">Subscribe Now</button>
                 </div>
             </div>
         </section>
