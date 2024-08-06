@@ -127,4 +127,4 @@ const JobApplicationForm = () => {
   );
 };
 
-export default ApplicationForm;
+export default JobApplicationForm;
