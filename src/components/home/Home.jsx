@@ -11,6 +11,7 @@ import {Box, styled} from '@mui/material';
 import clients from "../../assets/clients.png"
 import business from "../../assets/business.jpg"
 import Clients from './Clients';
+import ApplicationForm from '../Careear/Careear';
 
  
 
@@ -35,6 +36,8 @@ const Home = ()=>{
                <Component>
                <Hero />
                </Component>
+
+               <ApplicationForm />
 
                <section id='hero' className='w-[90%] m-auto flex lg:flex-row flex-col justify-between items-center gap-28 py-20 sm:px-20'>
                 <div className='flex flex-col justify-center items-start gap-8'>
