@@ -9,6 +9,7 @@ import Home from './components/home/Home'
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Services from '../src/components/servicesfile/Services';
+import JobApplicationForm from './components/Careear/Careear';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />
+      },
+      {
+        path: "career",
+        element: <JobApplicationForm />
       }
 
     ]

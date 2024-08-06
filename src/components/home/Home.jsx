@@ -1,16 +1,12 @@
 import react, { useEffect } from 'react';
-
 import Hero from "./Hero";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { GoDotFill } from "react-icons/go";
-// import business from "../../assets/business.jpg"
-
 import {Box, styled} from '@mui/material';
-
 import clients from "../../assets/clients.png"
 import business from "../../assets/business.jpg"
-import ApplicationForm from '../Careear/Careear';
+import Clients from './Clients';
 
 const Component = styled(Box)`
 padding: 10px 5px;
@@ -30,7 +26,6 @@ const Home = ()=>{
     return (
         <>
                <Component>
-            <ApplicationForm/>
                <Hero />
                </Component>
 
@@ -130,6 +125,7 @@ const Home = ()=>{
  </div>                
             </section>
 
+            <Clients />
         </>
     )
 }

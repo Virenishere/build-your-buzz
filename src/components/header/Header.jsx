@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-// import { Link } from "react-scroll";
 import { styled } from "@mui/material";
-
-import logoimg from "../../assets/Logo.png"
-
-import {Link} from "react-router-dom"
-
+import logoimg from "../../assets/Logo.png";
+import { Link } from "react-router-dom";
 
 const Logo = styled('img')({
   width: '5vh',
   height: '5vh',
-})
+});
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,20 +24,16 @@ const Header = () => {
     { link: "Home", path: "" },
     { link: "Services", path: "services" },
     { link: "About Us", path: "about" },
-    { link: "Contact", path: "contact" }, 
-    { link:"Careers", path: ""}
+    { link: "Contact", path: "contact" },
+    { link: "Careers", path: "career" }
   ];
 
   return (
-    <nav className="w-full flex bg-customBlue justify-between items-center gap-1 lg:px-16 px-6 py-4 sticky top-0 z-50">
-      {/* <h1 className="text-white md:text-4xl text-3xl font-bold font-ubuntu">
-        Build Your<span className="text-limegreen italic"> Buzz</span>
-      </h1> */}
-
+    <nav className="relative w-full flex bg-customBlue justify-between items-center gap-1 lg:px-16 px-6 py-4 sticky top-0 z-50">
       <Link to="">
-      <Logo src={logoimg} alt="logo"/>
+        <Logo src={logoimg} alt="logo" />
       </Link>
-      
+
       {/* Desktop navigation */}
       <ul className="lg:flex justify-center items-center gap-8 hidden">
         {navItems.map(({ link, path }) => (
@@ -65,7 +57,7 @@ const Header = () => {
       </Link>
 
       {/* Mobile menu toggle */}
-      <div className="flex justify-center items-center lg:hidden mt-3" onClick={toggleMenu}>
+      <div className="flex justify-center items-center lg:hidden" onClick={toggleMenu}>
         {isMenuOpen ? (
           <FaTimes className="text-white text-3xl cursor-pointer" />
         ) : (
