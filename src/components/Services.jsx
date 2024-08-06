@@ -2,7 +2,8 @@ import React from 'react';
 import services1 from '../assets/service1.png';
 import services2 from '../assets/services2.png';
 import services3 from '../assets/services3.png';
-import {Services2} from '../components/Service2'
+import Servicestwo from './Servicestwo';
+
 
 const CardSection = () => {
   return (
@@ -35,7 +36,7 @@ const CardSection = () => {
           </div>
         </div>
       </div>
-     {/* <Services2 /> */}
+     <Servicestwo />
     </div>
   );
 };

@@ -48,9 +48,9 @@ const Header = () => {
             <Link
               className="text-white uppercase font-semibold cursor-pointer p-3 rounded-lg hover:bg-limegreen hover:text-white font-ubuntu text-sm"
               to={path}
-              spy={true}
+              spy="true"
               offset={-100}
-              smooth={true}
+              smooth="true"
             >
               {link}
             </Link>
@@ -85,7 +85,7 @@ const Header = () => {
                 className="text-white uppercase font-semibold cursor-pointer p-3 rounded-lg hover:bg-limegreen hover:text-black w-full text-center"
                 to={path}
                 offset={-100}
-                smooth={true}
+                smooth="true"
                 onClick={closeMenu} // Close menu when a link is clicked
               >
                 {link}

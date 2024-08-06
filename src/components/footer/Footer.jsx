@@ -53,7 +53,7 @@ const Footer = () =>{
         </section>
 
         <div id="icon-box" className="bg-limegreen text-black p-3 rounded-full hover:bg-black hover:text-white cursor-pointer fixed lg:bottom-6 right-6 bottom-6">
-            <Link to='hero' spy={true} offset={-100} smooth={true}><FaArrowUp className='w-[35px] h-[35px]'/>
+            <Link to='hero' spy="true" offset={-100} smooth="true"><FaArrowUp className='w-[35px] h-[35px]'/>
             </Link>
         </div>
         </>
