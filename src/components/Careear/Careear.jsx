@@ -24,7 +24,7 @@ const JobApplicationForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Handle form submission
+   
     console.log('Selected file:', file);
     console.log('Skills:', skills);
     console.log('Experience:', experience);
