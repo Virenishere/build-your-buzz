@@ -32,7 +32,7 @@ const JobApplicationForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-4 bg-white rounded-lg shadow-md">
+    <div className="max-w-md mx-auto p-4 bg-white rounded-lg shadow-black shadow-md m-10">
       <h1 className="text-2xl font-bold mb-4">Job Application for Digital Marketing</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">

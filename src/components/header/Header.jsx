@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { styled } from "@mui/material";
-import logoimg from "../../assets/Logo.png";
 import { Link } from "react-router-dom";
+import logoimg from "../../assets/Logo.png";
 
 const Logo = styled('img')({
   width: '5vh',
@@ -12,13 +12,13 @@ const Logo = styled('img')({
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen(prevState => !prevState);
+  }, []);
 
-  const closeMenu = () => {
+  const closeMenu = useCallback(() => {
     setIsMenuOpen(false);
-  };
+  }, []);
 
   const navItems = [
     { link: "Home", path: "" },
@@ -28,31 +28,38 @@ const Header = () => {
     { link: "Careers", path: "career" }
   ];
 
+  const NavLink = ({ link, path, onClick }) => (
+    <li key={path}>
+      <Link
+        className="text-white uppercase font-semibold cursor-pointer p-3 rounded-lg hover:bg-limegreen hover:text-white font-ubuntu text-sm"
+        to={path}
+        onClick={onClick}
+      >
+        {link}
+      </Link>
+    </li>
+  );
+
   return (
     <nav className="relative w-full flex bg-customBlue justify-between items-center gap-1 lg:px-16 px-6 py-4 sticky top-0 z-50">
       <Link to="">
-        <Logo src={logoimg} alt="logo" />
+        <h1 className="text-white md:text-4xl text-3xl font-bold font-ubuntu">
+          Build Your <span className="text-limegreen italic">Buzz</span>
+        </h1>
       </Link>
 
       {/* Desktop navigation */}
       <ul className="lg:flex justify-center items-center gap-8 hidden">
-        {navItems.map(({ link, path }) => (
-          <li key={path}>
-            <Link
-              className="text-white uppercase font-semibold cursor-pointer p-3 rounded-lg hover:bg-limegreen hover:text-white font-ubuntu text-sm"
-              to={path}
-              spy="true"
-              offset={-100}
-              smooth="true"
-            >
-              {link}
-            </Link>
-          </li>
+        {navItems.map((item) => (
+          <NavLink key={item.path} link={item.link} path={item.path} />
         ))}
       </ul>
 
       {/* Hire Us button (hidden on mobile) */}
-      <Link to="contact" className="bg-limegreen font-ubuntu hover:bg-white text-black px-4 py-2 rounded-full font-bold transform hover:scale-105 transition-transform duration-300 cursor-pointer md:flex hidden">
+      <Link
+        to="contact"
+        className="bg-limegreen font-ubuntu hover:bg-white text-black px-4 py-2 rounded-full font-bold transform hover:scale-105 transition-transform duration-300 cursor-pointer md:flex hidden"
+      >
         HIRE US
       </Link>
 
@@ -72,18 +79,8 @@ const Header = () => {
         } w-full bg-black p-4 absolute top-16 left-0 lg:hidden`}
       >
         <ul className="flex flex-col justify-center items-center gap-2 w-full">
-          {navItems.map(({ link, path }) => (
-            <li key={path}>
-              <Link
-                className="text-white uppercase font-semibold cursor-pointer p-3 rounded-lg hover:bg-limegreen hover:text-black w-full text-center"
-                to={path}
-                offset={-100}
-                smooth="true"
-                onClick={closeMenu} // Close menu when a link is clicked
-              >
-                {link}
-              </Link>
-            </li>
+          {navItems.map((item) => (
+            <NavLink key={item.path} link={item.link} path={item.path} onClick={closeMenu} />
           ))}
         </ul>
       </div>

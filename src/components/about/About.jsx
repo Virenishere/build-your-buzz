@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { FaChevronCircleRight } from "react-icons/fa";
 import AOS from 'aos'
 import 'aos/dist/aos'
-
+import { Link } from "react-router-dom";
 
 
 const About = () =>{
@@ -39,7 +39,9 @@ const About = () =>{
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, vitae!</p>
                 </div>
 
+                <Link to="/contact">
                 <button className="bg-limegreen px-6 py-4 rounded-full text-[17px] font-semibold font-ubuntu hover:bg-black hover:text-white">Discover More</button>
+                </Link>
             </div>
         </section>
     )
