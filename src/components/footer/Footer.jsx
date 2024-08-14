@@ -78,6 +78,8 @@ const Footer = () => {
             <button className="bg-limegreen px-6 py-2 rounded-xl text-[17px] font-semibold active:bg-lime-300">
             Subscribe Now
             </button>
+
+            
           </div>
         </div>
       </section>
