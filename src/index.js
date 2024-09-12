@@ -5,11 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './Layout';
-import Home from './components/home/Home'
+import Home from './components/home/Home';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
-import Services from '../src/components/servicesfile/Services';
-import JobApplicationForm from './components/Careear/Careear';
+import Services from './components/servicesfile/Services'; // Corrected import path
 
 const router = createBrowserRouter([
   {
@@ -17,33 +16,29 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "",
-        element: <Home />
+        path: '',
+        element: <Home />,
       },
       {
-        path: "services",
-        element: <Services />
+        path: 'services',
+        element: <Services />,
       },
       {
-        path: "about",
-        element: <About />
+        path: 'about',
+        element: <About />,
       },
       {
-        path: "contact",
-        element: <Contact />
+        path: 'contact',
+        element: <Contact />,
       },
-      {
-        path: "career",
-        element: <JobApplicationForm />
-      }
+    ],
+  },
+]);
 
-    ]
-  }
-])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router= {router} />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

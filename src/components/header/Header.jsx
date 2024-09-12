@@ -4,6 +4,7 @@ import { styled } from "@mui/material";
 import { Link } from "react-router-dom";
 import logoimg from "../../assets/Logo.png";
 
+// Styled component for the logo
 const Logo = styled('img')({
   width: '5vh',
   height: '5vh',
@@ -12,24 +13,27 @@ const Logo = styled('img')({
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Toggle mobile menu visibility
   const toggleMenu = useCallback(() => {
     setIsMenuOpen(prevState => !prevState);
   }, []);
 
+  // Close mobile menu
   const closeMenu = useCallback(() => {
     setIsMenuOpen(false);
   }, []);
 
+  // Navigation items
   const navItems = [
     { link: "Home", path: "" },
     { link: "Services", path: "services" },
-    { link: "About Us", path: "about" },
-    { link: "Contact", path: "contact" },
-    { link: "Careers", path: "career" }
+    { link: "About", path: "about" },
+    { link: "Contact", path: "contact" }
   ];
 
+  // NavLink component for rendering individual links
   const NavLink = ({ link, path, onClick }) => (
-    <li key={path}>
+    <li>
       <Link
         className="text-white uppercase font-semibold cursor-pointer p-3 rounded-lg hover:bg-limegreen hover:text-white font-ubuntu text-sm"
         to={path}
@@ -42,7 +46,8 @@ const Header = () => {
 
   return (
     <nav className="relative w-full flex bg-customBlue justify-between items-center gap-1 lg:px-16 px-6 py-4 sticky top-0 z-50">
-      <Link to="">
+      {/* Logo */}
+      <Link to="/">
         <h1 className="text-white md:text-4xl text-3xl font-bold font-ubuntu">
           Build Your <span className="text-limegreen italic">Buzz</span>
         </h1>
@@ -64,7 +69,7 @@ const Header = () => {
       </Link>
 
       {/* Mobile menu toggle */}
-      <div className="flex justify-center items-center lg:hidden" onClick={toggleMenu}>
+      <div className="flex lg:hidden items-center" onClick={toggleMenu}>
         {isMenuOpen ? (
           <FaTimes className="text-white text-3xl cursor-pointer" />
         ) : (
@@ -76,7 +81,7 @@ const Header = () => {
       <div
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } w-full bg-black p-4 absolute top-16 left-0 lg:hidden`}
+        } lg:hidden w-full bg-black p-4 absolute top-16 left-0`}
       >
         <ul className="flex flex-col justify-center items-center gap-2 w-full">
           {navItems.map((item) => (
