@@ -1,4 +1,4 @@
-# Build Your Buzz - Digital Marketing Website
+# BuildYourBuzz - Digital Marketing Website
 
 **Code Repository for a Client's Digital Marketing Website**
 
