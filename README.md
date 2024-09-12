@@ -6,7 +6,7 @@ This website provides engaging design, a responsive layout, and modern web techn
 
 ## Website Overview
 
-- **Website Name**: Build Your Buzz
+- **Website Name**: BuildYourBuzz
 - **Purpose**: Provide digital marketing solutions that boost visibility, engagement, and conversions for businesses.
 - **Features**: 
   - Responsive design built using **Tailwind CSS**.
