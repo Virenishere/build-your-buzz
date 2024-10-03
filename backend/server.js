@@ -9,7 +9,13 @@ const PORT = process.env.PORT || 5000; // Use PORT from environment variable or 
 const app = express();
 
 // Middleware
-app.use(cors()); // Allow CORS for communication between frontend and backend
+const corsOptions = {
+    origin: 'https://build-your-buzz.vercel.app', // Allow requests only from this origin
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type'],
+};
+
+app.use(cors(corsOptions)); // Allow CORS for communication between frontend and backend
 app.use(bodyParser.json()); // Parse incoming JSON requests
 app.use(helmet()); // Add security headers
 
