@@ -32,7 +32,8 @@ const Contact = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:500/send-email', formData, {
+            // Update this URL with your actual Vercel deployed endpoint
+            const response = await axios.post('https://your-project-name.vercel.app/api/send-email', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
