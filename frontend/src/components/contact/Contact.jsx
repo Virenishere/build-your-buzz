@@ -32,7 +32,7 @@ const Contact = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('https://build-your-buzz-5p7uh0bi9-virender-prasads-projects.vercel.app/api/send-email', formData, {
+            const response = await axios.post('http://localhost:500/send-email', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
