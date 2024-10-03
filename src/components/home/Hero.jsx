@@ -1,6 +1,7 @@
 import React from 'react';
-import Carousel from "react-multi-carousel";
-import 'react-multi-carousel/lib/styles.css';
+import Slider from "react-slick";
+import 'slick-carousel/slick/slick.css'; 
+import 'slick-carousel/slick/slick-theme.css';
 import { styled } from "@mui/material";
 
 // Images
@@ -11,16 +12,16 @@ import seoimg from "../../assets/seo.png";
 
 // Styled component for the images
 const ImageContainer = styled('div')({
-  position: 'relative', // Allow positioning of child elements
+  position: 'relative',
   width: '100%',
-  height: '85vh', // Maintain a consistent height for carousel items
-  overflow: 'hidden', // Ensure images don't overflow their container
+  height: '85vh',
+  overflow: 'hidden',
 });
 
 const Image = styled('img')({
   width: '100%',
-  height: '100%', // Set height to 100% of the container
-  objectFit: 'cover',  // Cover the entire container while maintaining aspect ratio
+  height: '100%',
+  objectFit: 'cover',
 });
 
 // Carousel items
@@ -31,51 +32,33 @@ const carouselItems = [
   { src: seoimg, alt: 'seo image' },
 ];
 
-// Responsive settings for the carousel
-const responsive = {
-  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
-  tablet: { breakpoint: { max: 1024, min: 464 }, items: 1 },
-  mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
-};
-
 // Hero component
 const Hero = () => {
+  // Settings for the slick slider
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+  };
+
   return (
     <div style={{ position: 'relative', zIndex: 1 }}>
-      <Carousel
-        responsive={responsive}
-        swipeable={true}
-        draggable={true}
-        infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={2500}
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
-        containerClass="carousel-container"
-        arrows={true}
-      >
+      <Slider {...settings}>
         {carouselItems.map((item, index) => (
           <ImageContainer key={index}>
             <Image src={item.src} alt={item.alt} />
           </ImageContainer>
         ))}
-      </Carousel>
+      </Slider>
 
       {/* CSS Styles */}
       <style jsx>{`
-        .carousel-container {
-          position: relative;
-          z-index: 1;
-        }
-
-        .react-multi-carousel-dot {
-          z-index: 2;
-        }
-
-        .react-multi-carousel-arrow {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
+        .slick-arrow {
           background-color: rgba(0, 0, 0, 0.5);
           border-radius: 50%;
           width: 40px;
@@ -87,15 +70,15 @@ const Hero = () => {
           z-index: 2;
         }
 
-        .react-multi-carousel-arrow--left {
+        .slick-arrow.slick-prev {
           left: 10px;
         }
 
-        .react-multi-carousel-arrow--right {
+        .slick-arrow.slick-next {
           right: 10px;
         }
 
-        .custom-dot-list-style {
+        .slick-dots {
           position: absolute;
           bottom: 20px;
           width: 100%;
@@ -104,7 +87,7 @@ const Hero = () => {
           z-index: 2;
         }
 
-        .custom-dot-list-style .react-multi-carousel-dot {
+        .slick-dots li button {
           background-color: rgba(0, 0, 0, 0.5);
           border-radius: 50%;
           width: 10px;
@@ -112,12 +95,12 @@ const Hero = () => {
           margin: 0 5px;
         }
 
-        .custom-dot-list-style .react-multi-carousel-dot--active {
+        .slick-dots li.slick-active button {
           background-color: #fff;
         }
 
         @media (max-width: 600px) {
-          .react-multi-carousel-arrow {
+          .slick-arrow {
             width: 30px;
             height: 30px;
           }
