@@ -5,17 +5,18 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
 
-const PORT = process.env.PORT || 5000; // Use PORT from environment variable or default to 5000
+const PORT = process.env.PORT || 5000;
 const app = express();
 
-// Middleware
+// CORS configuration
 const corsOptions = {
     origin: 'https://build-your-buzz.vercel.app', // Allow requests only from this origin
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
 };
 
-app.use(cors(corsOptions)); // Allow CORS for communication between frontend and backend
+// Middleware
+app.use(cors(corsOptions)); // Allow CORS
 app.use(bodyParser.json()); // Parse incoming JSON requests
 app.use(helmet()); // Add security headers
 
