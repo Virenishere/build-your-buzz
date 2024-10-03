@@ -52,7 +52,7 @@ const Contact = () => {
             }
         } catch (error) {
             console.error('Error:', error);
-            alert('Error sending email.');
+            alert('There was an error sending the email. Please try again.');
         }
     };
 
@@ -63,45 +63,61 @@ const Contact = () => {
             </div>
             <div data-aos="zoom-in" data-aos-delay="400" className="lg:w-[50%] w-full flex flex-col justify-center items-start gap-8 bg-black lg:p-16 p-8 rounded-3xl">
                 <h1 className="text-white text-[45px] font-semibold font-ubuntu">Let's talk about your project</h1>
-                <div id="form-box" className="w-full bg-transparent flex flex-col justify-center items-center gap-4">
+                <form onSubmit={handleSubmit} className="w-full bg-transparent flex flex-col justify-center items-center gap-4">
+                    <label htmlFor="name" className="sr-only">Name</label>
                     <input
                         type="text"
+                        id="name"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
                         className="w-full text-white bg-slate-900 px-6 py-4 rounded-lg border-none font-ubuntu"
                         placeholder="Enter your full name here"
+                        required
                     />
+
                     <div className="w-full flex justify-center items-start gap-4">
+                        <label htmlFor="email" className="sr-only">Email</label>
                         <input
                             type="email"
+                            id="email"
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
                             placeholder="Enter your valid email here"
                             className="w-full text-white bg-slate-900 px-6 py-4 rounded-lg border-none font-ubuntu"
+                            required
                         />
+
+                        <label htmlFor="number" className="sr-only">Mobile Number</label>
                         <input
                             type="number"
+                            id="number"
                             name="number"
                             value={formData.number}
                             onChange={handleChange}
                             placeholder="Enter your mobile number"
                             className="w-full text-white bg-slate-900 px-6 py-4 rounded-lg border-none font-ubuntu"
+                            required
                         />
                     </div>
+
+                    <label htmlFor="message" className="sr-only">Message</label>
                     <textarea
+                        id="message"
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
                         className="w-full bg-slate-900 px-6 py-4 rounded-lg border-none text-white font-ubuntu"
                         placeholder="Enter your message"
                         rows="4"
+                        required
                     ></textarea>
-                    <button onClick={handleSubmit} className="bg-limegreen px-6 py-4 w-full rounded-md font-semibold text-md font-ubuntu">
+
+                    <button type="submit" className="bg-limegreen px-6 py-4 w-full rounded-md font-semibold text-md font-ubuntu">
                         Submit Now
                     </button>
-                </div>
+                </form>
             </div>
         </section>
     );
