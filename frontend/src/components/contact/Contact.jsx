@@ -33,7 +33,7 @@ const Contact = () => {
 
         try {
             // Update this URL with your actual Vercel deployed endpoint
-            const response = await axios.post('https://your-project-name.vercel.app/api/send-email', formData, {
+            const response = await axios.post('https://your-project-name.vercel.app/send-email', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
