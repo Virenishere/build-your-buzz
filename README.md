@@ -67,7 +67,7 @@ The backend is powered by **Express JS** with the following key modules:
 
 ## Deployment
 
-The website will be deployed to [xyz](https://xyz.com). More deployment instructions will be added soon.
+The website will be deployed to [xyz](https://build-your-buzz.vercel.app/). More deployment instructions will be added soon.
 
 ## Contributing
 
