@@ -91,13 +91,14 @@ const Contact = () => {
 
                         <label htmlFor="number" className="sr-only">Mobile Number</label>
                         <input
-                            type="number"
+                            type="tel"
                             id="number"
                             name="number"
                             value={formData.number}
                             onChange={handleChange}
                             placeholder="Enter your mobile number"
                             className="w-full text-white bg-slate-900 px-6 py-4 rounded-lg border-none font-ubuntu"
+                            pattern="[0-9]{10}"
                             required
                         />
                     </div>
