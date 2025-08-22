@@ -50,11 +50,11 @@ const ReviewCard = ({ name, initial, color, rating, review }) => {
   };
 
   return (
-    <div className="flex flex-col gap-4 bg-gray-700 p-4">
+    <div className="flex flex-col gap-4 bg-gray-700 p-4 rounded-lg">
       <div className="flex justify-between items-center">
         <div className="flex gap-2 items-center">
-          <div className={`w-7 h-7 text-center rounded-full ${color} text-white`}>{initial}</div>
-          <span>{name}</span>
+          <div className={`w-8 h-8 text-center rounded-full ${color} text-white`}>{initial}</div>
+          <span className="font-semibold">{name}</span>
         </div>
         <div className="flex p-1 gap-1 text-orange-300">
           {renderStars(rating)}
@@ -67,10 +67,10 @@ const ReviewCard = ({ name, initial, color, rating, review }) => {
 
 const Clients = () => {
   return (
-    <div className="bg-limegreen flex justify-center items-center min-h-screen p-10">
-      <div className="md:w-3/5 w-3/4 px-10 flex flex-col gap-2 p-5 bg-gray-800 text-white">
-        <h1 className="py-5 text-lg">Reviews</h1>
-        <div className="flex flex-col gap-3 mt-14">
+    <div className="bg-limegreen flex justify-center items-center min-h-screen p-5 md:p-10">
+      <div className="md:w-3/5 w-full px-5 md:px-10 flex flex-col gap-4 p-5 bg-gray-800 text-white rounded-lg">
+        <h1 className="py-5 text-2xl font-bold text-center">Reviews</h1>
+        <div className="flex flex-col gap-4 mt-14">
           {reviews.map((review, index) => (
             <ReviewCard key={index} {...review} />
           ))}
