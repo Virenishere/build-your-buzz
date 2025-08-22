@@ -26,9 +26,7 @@ const Image = styled('img')({
 // Carousel items
 const carouselItems = [
   { src: laptopimg, alt: 'laptop image' },
-  { src: phoneimg, alt: 'phone image' },
   { src: graphimg, alt: 'graph image' },
-  { src: seoimg, alt: 'seo image' },
 ];
 
 // Responsive settings for the carousel

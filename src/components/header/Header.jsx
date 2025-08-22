@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { styled } from "@mui/material";
 import { Link } from "react-router-dom";
-import logoimg from "../../assets/Logo.png";
+// import logoimg from "../../assets/Logo.png";
 
 // Styled component for the logo
 const Logo = styled('img')({

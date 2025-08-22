@@ -32,7 +32,7 @@ const Contact = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:500/send-email', formData, {
+            const response = await axios.post('http://localhost:5000/send-email', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

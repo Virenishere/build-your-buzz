@@ -6,7 +6,7 @@ const nodemailer = require("nodemailer");
 const cors = require('cors');
 const { text } = require('body-parser');
 const bodyParser = require('body-parser');
-const PORT = 500;
+const PORT = 5000;
 
 //middleware
 app.use(cors());  // Allow CORS for communication between frontend and backend
